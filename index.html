@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>Dark Mode</title>
+	
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+	</script>
+	
+	<style>
+		body{
+		padding:10% 3% 10% 3%;
+		text-align:center;
+		}
+		img{
+			height:140px;
+				width:140px;
+		}
+		h1{
+		color: #32a852;
+		}
+		.mode {
+			float:right;
+		}
+		.change {
+			cursor: pointer;
+			border: 1px solid #555;
+			border-radius: 40%;
+			width: 20px;
+			text-align: center;
+			padding: 5px;
+			margin-left: 8px;
+		}
+		.dark{
+			background-color: #222;
+			color: #e6e6e6;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="mode">
+		Dark mode:			
+		<span class="change">OFF</span>
+	</div>
+	
+	<div>
+
+	</div>
+	
+	<script>
+		$( ".change" ).on("click", function() {
+			if( $( "body" ).hasClass( "dark" )) {
+				$( "body" ).removeClass( "dark" );
+				$( ".change" ).text( "OFF" );
+			} else {
+				$( "body" ).addClass( "dark" );
+				$( ".change" ).text( "ON" );
+			}
+		});
+	</script>
+</body>
+
+</html>
+
+    <head>
+        <style>
+            .card{
+              width:500px;
+              height:350px;
+              margin-top:200px;
+              background-color:skyblue;
+              border-radius:45px;
+            }
+            .container{
+              padding:2px 16px;
+            }
+          </style>
+        <meta charset="utf-8">
+        <title>Login + Firebase Database</title>
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+
+    </head>
+    <body bgcolor="pink">
+        <center>
+        <div class="card">
+            <div class="container">
+                <div>
+                    <h2> Login + Firebase Database </h2>
+                </div>
+
+                <div>
+                    <div >
+                        <p><input type="text" id="full_name" placeholder="Full name"></p>
+                        <p></p><input type="email" id="email" placeholder="Email"></p>
+                        <p></p><input type="password" id="password" placeholder="New Password"></p>
+
+                        <p></p><input type="text" id="favourite_song" placeholder="The Best Song Ever"></p>
+                        <p></p><input type="text" id="milk_before_cereal" placeholder="Milk Before Cereal? ( Yes | No )"></p>
+                        <div>
+                           <button onclick="register()">Register</button>
+                           <button onclick="login()">login</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- Our script must be loaded after firebase references -->
+    <script src="index.js"></script>
+
+</html>
